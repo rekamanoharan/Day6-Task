@@ -105,7 +105,7 @@ getRate(customerCity)
 
 
 2.
-I have tried this but we didnt learn about typescript in class so sir told to raise query to avoid this qn as it is out of syllabus.
+I have tried this but we didnt learn about typescript in class so sir told to raise query to avoid this qn as it is out of syllabus or try in javascript .I tried in js
 
 let pi=3.14;
 class circle{
@@ -131,3 +131,32 @@ console.log(a.getradius())
 console.log(a.getcolor());
 console.log(a.getarea())
 console.log(a.getcircumference())
+
+Setting radius and color:
+
+
+class circle{
+    constructor(radius,color){
+        this._radius=radius;
+        this._color=color;
+        }
+        get radius(){
+        return this._radius;
+        }
+        set radius(value=''){
+        console.log("setting radius")
+        this._radius=value;
+        }
+        get color(){
+            return this._color;
+        }
+       set color(value=''){
+        console.log('setting color')       
+        this._color=value;
+        }
+    
+}
+const a=new circle(1.0,"red");
+a.radius="2.0";
+a.color="green";
+console.log(a);
