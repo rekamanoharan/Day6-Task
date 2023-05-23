@@ -1,0 +1,133 @@
+1.class-Movie
+
+a. Write a constructor for the class Movie, which takes a String representing the title of the movie, a String representing the studio, and a String representing the rating as its arguments, and sets the respective class properties to these values.
+
+class Movie{
+  constructor(title,studio,rating ) {
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;
+    }
+    getMovieDetails() {
+     console.log(`${this.title},${this.studio},${this.rating} `);
+  }
+  }
+    const name = new Movie('vtv','ags','PG13');
+    name.getMovieDetails();
+
+b. The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+
+class Movie{
+  constructor(title,studio,rating) {
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating || "PG";
+    }
+  }
+    const name = new Movie('vtv','ags','')
+    console.log(name);
+
+c.Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
+
+ class Movie{
+  constructor(title,studio,rating ) {
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;
+    }
+   
+  getPG(data = []) {
+     return data.filter((d) => d.rating =='PG');
+  } 
+  }
+  const movieUtils= new Movie();
+  
+ var movieList=[
+     new Movie('vtv','ags','PG'),
+     new Movie('PS2','red giant','PG123'),
+     new Movie('Master','studio green','PG13'),
+     new Movie('puli','vishal production','R'),
+     new Movie('pathu thala','avm','PG'),
+     ];
+     console.log(movieUtils.getPG(movieList))
+     
+    
+
+d.Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+
+class Movie {
+     constructor(title,studio,rating){
+     this.title=title;
+     this.studio=studio;
+     this.rating=rating;
+     }
+     getMovieDetails() {
+     console.log(`${this.title},${this.studio},${this.rating} `);
+      } 
+      }
+      const name= new Movie('Casino Royale', 'Eon Productions','PG13');
+      name.getMovieDetails();
+
+3.Write a “person” class to hold all the details.
+
+ class Person {
+     constructor(name,country,city,state,mobileNumber){
+     this.name=name;
+     this.country=country;
+     this.city=city;
+     this.state=state;
+     this.mobileNumber=mobileNumber;
+     }
+     getMovieDetails() {
+     console.log(`${this.name},${this.country},${this.city},${this.state},${this.mobileNumber} `);
+      } 
+      }
+      const details= new Person('rahul','India','Coimbatore','Tamilnadu','9487653213');
+      details.getMovieDetails();
+      
+ 4.write a class to calculate the uber price.
+
+let baseFee = 100
+let cities = ["sulur", "vadavalli", "gandhipuram", ]
+let uberRates = [30, 50, 100];
+let customerName = prompt("What is your name?")
+let customerCity = prompt("What is your city?");
+console.log("Hello", customerName+ ", welcome to the Uber Rate Program");
+function getRate(customerCity) {
+  function uberRate(customerCity, index) {
+  /* console.log(index); */
+    let finalRate = (uberRates[index]) * baseFee
+    return finalRate
+  }
+  console.log(customerCity, "rate is:", uberRate(customerCity, cities.indexOf(customerCity)))
+}
+getRate(customerCity)
+
+
+2.
+I have tried this but we didnt learn about typescript in class so sir told to raise query to avoid this qn as it is out of syllabus.
+
+let pi=3.14;
+class circle{
+    constructor(radius,color){
+        this.radius=radius;
+        this.color=color;
+        }
+        getradius(){
+        return this.radius;
+        }
+        getcolor(){
+            return this.color;
+        }
+        getarea(){
+          return pi*this.radius*this.radius;
+        }
+        getcircumference(){
+            return 2*pi*this.radius;
+        }
+}
+let a=new circle(1.0,"red");
+console.log(a.getradius())
+console.log(a.getcolor());
+console.log(a.getarea())
+console.log(a.getcircumference())
