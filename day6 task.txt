@@ -103,6 +103,19 @@ function getRate(customerCity) {
 }
 getRate(customerCity)
 
+sry sir i wrote in fn .now i have written code in class and updated
+
+class uberPrice{
+constructor(kmstravelled,priceperkm){
+this.kmstravelled=kmstravelled,
+this.priceperkm=priceperkm
+}
+travelledAmount(){
+return this.kmstravelled*this.priceperkm
+}
+}
+var amount=new uberPrice(100,50)
+console.log(amount.travelledAmount());
 
 2.
 I have tried this but we didnt learn about typescript in class so sir told to raise query to avoid this qn as it is out of syllabus or try in javascript .I tried in js
